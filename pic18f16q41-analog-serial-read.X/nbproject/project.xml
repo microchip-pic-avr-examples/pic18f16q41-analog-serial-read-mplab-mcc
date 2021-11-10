@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Q41_ASR1</name>
+            <name>pic18f16q41-analog-serial-read</name>
             <creation-uuid>82015abd-320f-4eba-8e63-ad95ff235f5a</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
