@@ -29,7 +29,7 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 - MPLAB® X IDE 5.50.0 or newer [(MPLAB® X IDE 5.50)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-analog-serial-read-mplab-mcc-github)
 - MPLAB® XC8 2.32.0 or newer compiler [(MPLAB® XC8 2.32)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-analog-serial-read-mplab-mcc-github)
 - MPLAB® Code Configurator 5.0.3 or newer [(MPLAB® MCC 5.0.3)](https://www.microchip.com/en-us/development-tools-tools-and-software/embedded-software-center/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-analog-serial-read-mplab-mcc-github)
-- MPLAB® Data Visualizer 1.3.1113 or newer [(MPLAB® MCC 5.0.3)](https://www.microchip.com/en-us/development-tools-tools-and-software/embedded-software-center/mplab-data-visualizer?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-analog-serial-read-mplab-mcc-github)
+- MPLAB® Data Visualizer 1.3.1113 or newer [(MPLAB® Data Visualizer 1.3.1113)](https://www.microchip.com/en-us/development-tools-tools-and-software/embedded-software-center/mplab-data-visualizer?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-analog-serial-read-mplab-mcc-github)
 
 ## Hardware Used
 
@@ -51,35 +51,35 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 #### Step #2: MPLAB Code Configurator (MCC)
 - Open MPLAB Code Configurator by clicking the blue “MCC” shield in the top toolbar
 
-![MCHP](images/MCC_redbox.png)
+![MCC_redbox](images/MCC_redbox.png)
 
 - When MCC opens, select “MCC Melody” and click “Finish” on the next page
 
-![MCHP](images/MCC_melody.png)
+![MCC_melody](images/MCC_melody.png)
 
 - Modify the Clock Control under “Project Resources” in the top left panel
  - Set “Clock Source” to High Frequency Internal Oscillator (HFINTOSC)
  - Set “HF Internal Clock” to 4_MHz
  - Set “Clock Divider” to 4
 
-![MCHP](images/ledclockcntrl.png)
+![ledclockcntrl](images/ledclockcntrl.png)
 
 
 - Set Configuration Bits under “Project Resources” in the top left panel
  - Set “External Oscillator Mode Selection” to “Oscillator not enabled”
 
-![MCHP](images/ledconfigbits.png)
+![ledconfigbits](images/ledconfigbits.png)
 
 #### Step #3: Configure the Pins
 
 - LED0 is connected to pin RC1
  - Acquire this pin for GPIO output
 
-![MCHP](images/ledpingrid.png)
+![ledpingrid](images/ledpingrid.png)
 
 - Assign pin RC1 a custom name of “LED” and ensure all other configurations are as seen below
 
-![MCHP](images/ledpinassign.png)
+![ledpinassign](images/ledpinassign.png)
 
 #### Step #4: Generate the project
 - Click the generate button in MCC to create the appropriate header and source files for this configuration
@@ -108,11 +108,11 @@ int main(void)
 
 - Make and program the device and observe the toggling LED
 
-![MCHP](images/MCC_makeandprogram.png)
+![MCC_makeandprogram](images/MCC_makeandprogram.png)
 
 - Result:
 
-![MCHP](images/giphy.gif)
+![giphy](images/giphy.gif)
 
 
 ## Setup #2: Analog-Serial-Read
@@ -124,7 +124,7 @@ int main(void)
  - Jumper wire from negative rail to GND pin on potentiometer
  - Jumper wire from pin RA5 on Curiosity Nano to Output pin on potentiometer
 
-![MCHP](images/IMG_7009.jpg)
+![IMG_7009](images/IMG_7009.jpg)
 
 #### Step #2: Creating the Project
 
@@ -139,30 +139,30 @@ int main(void)
 #### Step #3: MPLAB Code Configurator (MCC)
 - Open MPLAB Code Configurator by clicking the blue “MCC” shield in the top toolbar
 
-![MCHP](images/MCC_redbox.png)
+![MCC_redbox](images/MCC_redbox.png)
 
 - When MCC opens, select “MCC Melody” and click “Finish” on the next page
 
-![MCHP](images/MCC_melody.png)
+![MCC_melody](images/MCC_melody.png)
 
 - Modify the Clock Control under “Project Resources” in the top left panel
  - Set “Clock Source” to High Frequency Internal Oscillator (HFINTOSC)
  - Set “HF Internal Clock” to 4_MHz
  - Set “Clock Divider” to 1
 
-![MCHP](images/asrclock.png)
+![asrclock](images/asrclock.png)
 
 - Set Configuration Bits under “Project Resources” in the top left panel
  - Set “External Oscillator Mode Selection” to “Oscillator not enabled”
 
-![MCHP](images/asrbits.png)
+![asrbits](images/asrbits.png)
 
 #### Step #4: Add ADCC and UART Peripherals
 - In Device Resources:
  - Drivers → ADCC → ADCC
  - Drivers → UART → UART1
 
-![MCHP](images/asrperipherals.png)
+![asrperipherals](images/asrperipherals.png)
 
 ###### Once the peripherals are added, modify the peripherals:
 - ADCC
@@ -173,7 +173,7 @@ int main(void)
    - Negative Reference = VSS
    - Acquisition Count = 2
 
-![MCHP](images/asradcc.png)
+![asradcc](images/asradcc.png)
 
 - UART1
   - Software Settings:
@@ -184,7 +184,7 @@ int main(void)
    - Enable Transmit and Receive should be checked
    - Everything else can be left as default settings
 
-![MCHP](images/asruart.png)
+![asruart](images/asruart.png)
 
 #### Step #5: Configure the Pins
 - TX1 is connected to pin RB7
@@ -192,11 +192,11 @@ int main(void)
 - Connect ADCC “ANx” to pin RA5
   - This is the pin on the Curiosity Nano that our potentiometer is connected to
 
-![MCHP](images/asrpins.png)
+![asrpins](images/asrpins.png)
 
 - Assign pin RA5 a custom name of “POT” and ensure all other configurations are as seen below
 
-![MCHP](images/asrpinname.png)
+![asrpinname](images/asrpinname.png)
 
 #### Step #6: Generate the Project
 - Click the generate button in MCC to create the appropriate header and source files for this configuration
@@ -223,13 +223,13 @@ int main(void)
 
 - Make and program the device
 
-![MCHP](images/MCC_makeandprogram.png)
+![MCC_makeandprogram](images/MCC_makeandprogram.png)
 
 #### Step #8: Terminal Emulator
 - For this project, the terminal program that is being used is MPLAB Data Visualizer
   - Open Data Visualizer by clicking the green “DV” shield in the top toolbar
 
-![MCHP](images/MCC_DV.png)
+![MCC_DV](images/MCC_DV.png)
 
 - Click on your Curiosity Nano COM port and set:
   - Baud Rate to: 19200
@@ -238,19 +238,19 @@ int main(void)
   - Stop Bits: 1 bit
 - Click “Apply” to save these settings
 
-![MCHP](images/asrdvapply.png)
+![asrdvapply](images/asrdvapply.png)
 
 - On the right side of the terminal window, ensure “Display As: 8-bit ASCII” is selected
 
-![MCHP](images/asrascii.png)
+![asrascii](images/asrascii.png)
 
 - Press the drop-down carrot next to your Curiosity Nano’s COM port and select “Send to Terminal”
 
-![MCHP](images/asrsendterminal.png)
+![asrsendterminal](images/asrsendterminal.png)
 
 - While twisting the potentiometer’s dial, you will be able to see the changing values within the Data Visualizer terminal window
 
-![MCHP](images/asrresults.png)
+![asrresults](images/asrresults.png)
 
 
 
