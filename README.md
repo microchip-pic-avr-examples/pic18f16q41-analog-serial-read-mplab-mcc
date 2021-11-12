@@ -51,7 +51,7 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 #### Step #2: MPLAB Code Configurator (MCC)
 - Open MPLAB Code Configurator by clicking the blue “MCC” shield in the top toolbar
 
-![MCC_redbox](./images/MCC_redbox.png)
+![MCC_redbox](images/MCC_redbox.png)
 
 - When MCC opens, select “MCC Melody” and click “Finish” on the next page
 
@@ -124,7 +124,7 @@ int main(void)
  - Jumper wire from negative rail to GND pin on potentiometer
  - Jumper wire from pin RA5 on Curiosity Nano to Output pin on potentiometer
 
-![IMG_7009](images/IMG_7009.jpg)
+![paint2](images/paint2.jpg)
 
 #### Step #2: Creating the Project
 
