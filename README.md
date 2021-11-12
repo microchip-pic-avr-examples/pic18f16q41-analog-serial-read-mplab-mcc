@@ -51,7 +51,7 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 #### Step #2: MPLAB Code Configurator (MCC)
 - Open MPLAB Code Configurator by clicking the blue “MCC” shield in the top toolbar
 
-![MCC_redbox](images/MCC_redbox.png)
+![MCC_redbox](./images/MCC_redbox.png)
 
 - When MCC opens, select “MCC Melody” and click “Finish” on the next page
 
