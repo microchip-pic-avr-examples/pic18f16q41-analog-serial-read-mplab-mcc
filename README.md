@@ -4,7 +4,7 @@
 
 # pic18f16q41 Analog-Serial-Read and LED Toggle
 
-In this example, we will show how to toggle a LED on and off for 500 milliseconds as well as showing how to create an analog-serial-read using a terminal emulator and potentiometer. Both demos were featured in the Future Electronics webinar titled “Reduce Your Time to Market with the MPLAB® Ecosystem of Software and Hardware Tools” from November 3rd, 2021 which can be found [here](https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-webinar-series).
+In this example, we will show how to toggle a LED on and off for 500 milliseconds as well as how to create an analog-serial-read using MPLAB® Data Visualizer and a potentiometer. Both demos were featured in the Future Electronics webinar titled “Reduce Your Time to Market with the MPLAB® Ecosystem of Software and Hardware Tools” from November 3rd, 2021 which can be found [here](https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-webinar-series).
 
 ## Related Documentation
 
@@ -35,7 +35,7 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 
 - pic18f16q41 Curiosity Nano development board
 - Breadboard
-- 5x, jumper wires
+- 5x, jump wires
 - 1x, 10k Ohm potentiometer
 
 ## Setup #1: LED Toggle
@@ -43,9 +43,9 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 - On the tool bar, click on New Project
 - Microchip Embedded; Standalone Project
 - Enter the Device
- - For this Project: PIC18F16Q41
+  - For this Project: pic18f16q41
 - Enter a name for this project, such as “LED_Toggle”
- - Name: “LED_Toggle”
+  - Name: “LED_Toggle”
    - Note: The project name cannot have any empty spaces
 
 #### Step #2: MPLAB Code Configurator (MCC)
@@ -53,27 +53,27 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 
 ![MCC_redbox](images/MCC_redbox.png)
 
-- When MCC opens, select “MCC Melody” and click “Finish” on the next page
+- When MCC opens, select “MCC Melody” and click “Finish”
 
 ![MCC_melody](images/MCC_melody.png)
 
 - Modify the Clock Control under “Project Resources” in the top left panel
- - Set “Clock Source” to High Frequency Internal Oscillator (HFINTOSC)
- - Set “HF Internal Clock” to 4_MHz
- - Set “Clock Divider” to 4
+  - Set “Clock Source” to High Frequency Internal Oscillator (HFINTOSC)
+  - Set “HF Internal Clock” to 4_MHz
+  - Set “Clock Divider” to 4
 
 ![ledclockcntrl](images/ledclockcntrl.png)
 
 
 - Set Configuration Bits under “Project Resources” in the top left panel
- - Set “External Oscillator Mode Selection” to “Oscillator not enabled”
+  - Set “External Oscillator Mode Selection” to “Oscillator not enabled”
 
 ![ledconfigbits](images/ledconfigbits.png)
 
 #### Step #3: Configure the Pins
 
 - LED0 is connected to pin RC1
- - Acquire this pin for GPIO output
+  - Acquire this pin for GPIO output
 
 ![ledpingrid](images/ledpingrid.png)
 
@@ -86,12 +86,12 @@ https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-we
 - Close MCC by clicking the blue “MCC” shield again
 
 #### Step #6: Modifying main.c
-- Upon the generation being completed, the new MCC generated header and source files will be in the project window. Select the main.c file and you will see an empty while(1) loop where you can add your application code.
+- Upon the generation being completed, the new MCC generated header and source files will be in the project window. Select the main.c file found within your source files and you will see an empty while(1) loop where you can add your application code
 - Follow this path under “Projects”
- - LED_Toggle -> Header Files -> MCC Generated Files -> System -> pins.h
+  - LED_Toggle -> Header Files -> MCC Generated Files -> System -> pins.h
 - Open “pins.h” and scroll down to find the defined function “LED_Toggle()”
- - Copy and paste this function into your main.c, while loop.
- - Below this function, add a delay of 500 milliseconds using “__delay_ms(500);”
+  - Copy and paste this function into your main.c, while(1) loop
+  - Below this function, add a delay of 500 milliseconds using “__delay_ms(500);”
 
 ```
 int main(void)
@@ -118,11 +118,11 @@ int main(void)
 ## Setup #2: Analog-Serial-Read
 #### Step #1: Setting Up the Breadboard
 - Follow the image below to set up your bread Breadboard
- - VTG from Curiosity Nano to positive rail
- - GND from Curiosity Nano to negative rail
- - Jumper wire from positive rail to Vcc pin on potentiometer
- - Jumper wire from negative rail to GND pin on potentiometer
- - Jumper wire from pin RA5 on Curiosity Nano to Output pin on potentiometer
+  - VTG from Curiosity Nano to positive rail
+  - GND from Curiosity Nano to negative rail
+  - Jumper wire from positive rail to Vcc pin on potentiometer
+  - Jumper wire from negative rail to GND pin on potentiometer
+  - Jumper wire from pin RA5 on Curiosity Nano to Output pin on potentiometer
 
 ![paint2](images/paint2.jpg)
 
@@ -131,10 +131,10 @@ int main(void)
 - On the tool bar, click on New Project
 - Microchip Embedded; Standalone Project
 - Enter the Device
- - For this Project: PIC18F16Q41
+  - For this Project: PIC18F16Q41
 - Enter a name for this project, such as “Analog_Serial_Read”
- - Name: “Analog_Serial_Read”
-   - Note: The project name cannot have any empty spaces
+  - Name: “Analog_Serial_Read”
+    - Note: The project name cannot have any empty spaces
 
 #### Step #3: MPLAB Code Configurator (MCC)
 - Open MPLAB Code Configurator by clicking the blue “MCC” shield in the top toolbar
@@ -146,50 +146,50 @@ int main(void)
 ![MCC_melody](images/MCC_melody.png)
 
 - Modify the Clock Control under “Project Resources” in the top left panel
- - Set “Clock Source” to High Frequency Internal Oscillator (HFINTOSC)
- - Set “HF Internal Clock” to 4_MHz
- - Set “Clock Divider” to 1
+  - Set “Clock Source” to High Frequency Internal Oscillator (HFINTOSC)
+  - Set “HF Internal Clock” to 4_MHz
+  - Set “Clock Divider” to 1
 
 ![asrclock](images/asrclock.png)
 
 - Set Configuration Bits under “Project Resources” in the top left panel
- - Set “External Oscillator Mode Selection” to “Oscillator not enabled”
+  - Set “External Oscillator Mode Selection” to “Oscillator not enabled”
 
 ![asrbits](images/asrbits.png)
 
 #### Step #4: Add ADCC and UART Peripherals
 - In Device Resources:
- - Drivers → ADCC → ADCC
- - Drivers → UART → UART1
+  - Drivers → ADCC → ADCC
+  - Drivers → UART → UART1
 
 ![asrperipherals](images/asrperipherals.png)
 
 ###### Once the peripherals are added, modify the peripherals:
 - ADCC
- - Hardware Settings to change while the rest can be left as default
-   - Operating Mode = Basic Mode
-   - Result Alignment = right
-   - Positive Reference = VDD
-   - Negative Reference = VSS
-   - Acquisition Count = 2
+  - Hardware Settings to change while the rest can be left as default
+    - Operating Mode = Basic Mode
+    - Result Alignment = right
+    - Positive Reference = VDD
+    - Negative Reference = VSS
+    - Acquisition Count = 2
 
 ![asradcc](images/asradcc.png)
 
 - UART1
   - Software Settings:
-   - Enable "Redirect STDIO to UART"
+    - Enable "Redirect STDIO to UART"
   - Hardware Settings:
-   - Enable UART box should be checked
-   - Set the Baud Rate to 19200
-   - Enable Transmit and Receive should be checked
-   - Everything else can be left as default settings
+    - Enable UART box should be checked
+    - Set the Baud Rate to 19200
+    - Enable Transmit and Receive should be checked
+    - Everything else can be left as default settings
 
 ![asruart](images/asruart.png)
 
 #### Step #5: Configure the Pins
-- TX1 is connected to pin RB7
-- RX1 is connected to pin RB5
-- Connect ADCC “ANx” to pin RA5
+- UART1 TX1 is connected to pin RB7
+- UART1 RX1 is connected to pin RB5
+- ADCC “ANx” is connected to pin RA5
   - This is the pin on the Curiosity Nano that our potentiometer is connected to
 
 ![asrpins](images/asrpins.png)
@@ -202,7 +202,7 @@ int main(void)
 - Click the generate button in MCC to create the appropriate header and source files for this configuration
 
 #### Step #7: Modifying main.c
-- Upon the generation being completed, the new MCC generated header and source files will be in the project window. Select the main.c file under source files and you will see an empty while(1) loop where you can add your application code.
+- Upon the generation being completed, the new MCC generated header and source files will be in the project window. Select the main.c file found within your source files and you will see an empty while(1) loop where you can add your application code
 - Follow this path under “Projects”
   - Analog_Serial_Read -> Header Files -> MCC Generated Files -> ADC -> adcc.h
 - Open “adcc.h” and scroll down to find the defined function “adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);”
@@ -255,4 +255,4 @@ int main(void)
 
 
 ## Summary
-This application demonstrates how to toggle a LED on and off at a rate of 500 milliseconds as well as how to configure an analog-serial-read using a potentiometer
+This application demonstrates how to toggle a LED on and off at a rate of 500 milliseconds as well as how to configure an analog-serial-read using a potentiometer.
