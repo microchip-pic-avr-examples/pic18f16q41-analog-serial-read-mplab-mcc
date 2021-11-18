@@ -38,7 +38,7 @@
         },
         "author": "Erik Tollefson",
         "peripherals": ["UART","ADCC"],
-        "keywords": ["MCC","MCC Melody","Data Visualizer","UART","ADCC","Curiosity Nano","LED", "Analog", "Core Independent Peripheral"],
+        "keywords": ["MCC","Data Visualizer","UART","ADCC","Curiosity Nano","LED", "Analog"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
