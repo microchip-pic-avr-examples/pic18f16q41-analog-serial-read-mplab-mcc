@@ -76,7 +76,7 @@ Webinar video link from Future Electronics can be found [here.](https://www.futu
 - LED0 is connected to pin RC1
   - Set this pin as a digital GPIO output
 
-![LED Pin Grid](images/LEDPinGrid.png)
+![LED Pin Grid](images/LEDPinGridView.png)
 
 - Assign pin RC1 a custom name of “LED” and ensure all other configurations are as seen below
 
@@ -91,8 +91,8 @@ Webinar video link from Future Electronics can be found [here.](https://www.futu
 - Follow this path under “Projects”
   - LED_Toggle -> Header Files -> MCC Generated Files -> System -> pins.h
 - Open “pins.h” and scroll down to find the defined function “LED_Toggle()”
-  - Copy and paste this function into your main.c, while(1) loop
-  - Below this function, add a delay of 500 milliseconds using “__delay_ms(500);”
+  - Copy and paste this function into your main.c, ``while(1)`` loop
+  - Below this function, add a delay of 500 milliseconds using ``__delay_ms(500);``
 
 ```
 int main(void)
@@ -144,7 +144,7 @@ int main(void)
 
 - When MCC opens, select “MCC Melody” and click “Finish” on the next page
 
-![Opening MCC Melody](images/Opening_melody.png)
+![Opening MCC Melody](images/ASROpeningMelody.png)
 
 - Modify the Clock Control under “Project Resources” in the top left panel
   - Set “Clock Source” to High Frequency Internal Oscillator (HFINTOSC)
@@ -164,7 +164,7 @@ int main(void)
   - Drivers → ADCC → ADCC
   - Drivers → UART → UART1
 
-![Analog Serial Read Peripherals](images/ASRPeripherals.png)
+![Analog Serial Read Peripherals](images/ASRPeripheralsADCCUART.png)
 
 ###### Once the peripherals are added, modify the peripherals:
 - ADCC
