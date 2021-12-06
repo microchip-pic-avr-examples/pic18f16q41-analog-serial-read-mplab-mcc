@@ -1,5 +1,3 @@
-<!-- Please do not change this logo with link -->
-
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
 # PIC18F16Q41 Analog-Serial-Read and LED Toggle
@@ -8,23 +6,16 @@ In this step-by-step example, an LED will be toggled every 500ms and an analog v
 
 ## Related Documentation
 
-PIC18F16Q41 Product Page found [here.](https://www.microchip.com/en-us/product/PIC18F16Q41)
+- PIC18F16Q41 Product Page found [here.](https://www.microchip.com/en-us/product/PIC18F16Q41)
 
-PIC18F06/16Q41 DataSheet found [here.](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F06-16Q41-DataSheet-40002214C.pdf)
+- PIC18F06/16Q41 DataSheet found [here.](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F06-16Q41-DataSheet-40002214C.pdf)
 
-PIC18F16Q41 Hardware User Guide found [here.](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F16Q41-Curiosity-Nano-Hardware-User-Guide-DS50003048A.pdf)
+- PIC18F16Q41 Hardware User Guide found [here.](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F16Q41-Curiosity-Nano-Hardware-User-Guide-DS50003048A.pdf)
 
-Webinar video link from Future Electronics can be found [here.](https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-webinar-series)
+- Webinar video link from Future Electronics can be found [here.](https://www.futureelectronics.com/resources/events/microchip-8-bit-technology-webinar-series)
 
 
 ## Software Used
-
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
 
 - MPLAB X IDE 5.50.0 or newer [(MPLAB® X IDE 5.50)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-analog-serial-read-mplab-mcc-github)
 - MPLAB XC8 2.32.0 or newer compiler [(MPLAB® XC8 2.32)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-analog-serial-read-mplab-mcc-github)
@@ -125,6 +116,8 @@ int main(void)
   - Jumper wire from negative rail to GND pin on potentiometer
   - Jumper wire from pin RA5 on Curiosity Nano to Output pin on potentiometer
 
+![Wiring Schematic](images/ASR_Schematic.png)
+
 ![Breadboard Setup](images/BreadboardSetup.jpg)
 
 #### Step #2: Creating the Project
@@ -198,7 +191,7 @@ int main(void)
 
 - Assign pin RA5 a custom name of “POT” and ensure all other configurations are as seen below
 
-![Analog-Serial-Read Pin Configuration](images/ASRPinConfiguration.png)
+![Analog-Serial-Read Pin Configuration](images/ASRPinConfiguration2.png)
 
 #### Step #6: Generate the Project
 - Click the generate button in MCC to create the appropriate header and source files for this configuration
