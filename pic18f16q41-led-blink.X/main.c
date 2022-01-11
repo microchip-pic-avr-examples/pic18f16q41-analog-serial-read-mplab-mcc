@@ -24,7 +24,7 @@
     Main application
 */
 
-int main(void)
+int main(void) 
 {
     SYSTEM_Initialize();
 
