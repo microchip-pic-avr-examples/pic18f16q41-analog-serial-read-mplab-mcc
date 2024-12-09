@@ -10,21 +10,21 @@
         "shortDescription": "In this example, we will show how to toggle a LED on and off for 500 milliseconds as well as how to create an analog-serial-read using MPLAB® Data Visualizer and a potentiometer. Both demos were featured in the Future Electronics webinar titled “Reduce Your Time to Market with the MPLAB® Ecosystem of Software and Hardware Tools” from November 3rd, 2021.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.50.0"
+            "semverRange": ">=6.20.0"
         },
         "compiler": [
             {
                 "name": "XC8",
-                "semverRange": "^2.32.0"
+                "semverRange": "^3.0.0"
             }
         ],
         "dfp": {
             "name": "PIC18F-Q_DFP",
-            "semverRange": "1.9.175"
+            "semverRange": "1.24.430"
         },
         "configurator": {
             "name": "MCC",
-            "semverRange": ">=5.0.3"
+            "semverRange": ">=5.5.1"
         },
         "device": {
             "metaDataVersion": "1.0.0",
