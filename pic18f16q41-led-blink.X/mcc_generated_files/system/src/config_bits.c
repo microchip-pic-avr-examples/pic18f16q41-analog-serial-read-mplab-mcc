@@ -1,26 +1,18 @@
 /**
-  @Generated CCL Source File
-
-  @Company:
-    Microchip Technology Inc.
-
-  @File Name:
-    config_bits.c
-
-  @Summary:
-    This is the config_bits.c file generated using CCL
-
-  @Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
-    Generation Information : 
-        Driver Version    :  2.00
-    The generated drivers are tested against the following:
-        Compiler          :  XC8 v2.31
-        MPLAB             :  MPLAB X 5.45
+ * CONFIGURATION BITS Generated Driver Source File.
+ * 
+ * @file config_bits.c
+ * 
+ * @ingroup config_bitsdriver
+ * 
+ * @brief This file contains the API Implementation for the Device Configuration Bits driver.
+ *
+ * @version Driver Version 2.0.2
+ *
+ * @version Package Version 2.1.6
 */
-
 /*
-© [2021] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -43,8 +35,8 @@
 // Configuration bits: selected in the GUI
 
 //CONFIG1
-#pragma config FEXTOSC = OFF     // External Oscillator Mode Selection->Oscillator not enabled
-#pragma config RSTOSC = EXTOSC     // Power-up Default Value for COSC->EXTOSC operating per FEXTOSC bits (device manufacturing default)
+#pragma config FEXTOSC = ECH     // External Oscillator Mode Selection->EC (external clock) above 8 MHz
+#pragma config RSTOSC = HFINTOSC_64MHZ     // Power-up Default Value for COSC->HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1
 
 //CONFIG2
 #pragma config FCMENP = ON     // Fail-Safe Clock Monitor Enable - Primary XTAL Enable->Fail-Safe Clock Monitor enabled; timer will flag FSCMP bit and OSFIF interrupt on EXTOSC failure.
@@ -82,7 +74,6 @@
 #pragma config SAFEN = OFF     // Storage Area Flash (SAF) Enable->SAF disabled
 #pragma config BBEN = OFF     // Boot Block Enable->Boot block disabled
 #pragma config BBSIZE = BBSIZE_512     // Boot Block Size Selection->Boot Block size is 512 words
-#pragma config DEBUG = OFF     // Debugger Enable->Background Debugger disabled
 
 //CONFIG8
 #pragma config WRTB = OFF     // Boot Block Write Protection->Boot Block not Write protected
@@ -94,3 +85,7 @@
 //CONFIG9
 #pragma config CP = OFF     // User Program Flash Memory and Data EEPROM Code Protection->PFM and Data EEPROM code protection disabled
 
+
+/**
+ End of File
+*/
